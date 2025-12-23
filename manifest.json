@@ -1,0 +1,10 @@
+{
+  "id": "drag-drop-image-resizer",
+  "name": "Drag & Drop Image Resizer",
+  "version": "1.0.0",
+  "minAppVersion": "0.15.0",
+  "description": "Resize images by hovering and dragging. Simple and intuitive.",
+  "author": "CharlesSo",
+  "authorUrl": "https://twitter.com/_CharlesSo",
+  "isDesktopOnly": false
+}

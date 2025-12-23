@@ -1,0 +1,35 @@
+/* Hide image embed syntax in Live Preview for cleaner UX */
+/* Only applies when setting is enabled (body has class) */
+
+/* Hide all formatting around images when cursor is on the line */
+body.hide-image-link-syntax .cm-line:has(.internal-embed) .cm-formatting,
+body.hide-image-link-syntax .cm-line:has(.internal-embed) .cm-hmd-internal-link,
+body.hide-image-link-syntax .cm-line:has(.internal-embed) .cm-formatting-link,
+body.hide-image-link-syntax .cm-line:has(.internal-embed) .cm-link,
+body.hide-image-link-syntax .cm-line:has(.internal-embed) .cm-underline,
+body.hide-image-link-syntax .cm-line:has(.internal-embed) .cm-formatting-embed,
+body.hide-image-link-syntax .cm-line:has(.internal-embed) .cm-embed-block {
+	display: none !important;
+}
+
+/* Hide link text before/after the image embed */
+body.hide-image-link-syntax .cm-line:has(.internal-embed) > .cm-underline,
+body.hide-image-link-syntax .cm-line:has(.internal-embed) > span.cm-hmd-internal-link {
+	display: none !important;
+}
+
+/* Keep only the image visible, hide surrounding syntax spans */
+body.hide-image-link-syntax .cm-line:has(.internal-embed) > span:not(:has(.internal-embed)):not(.internal-embed) {
+	display: none !important;
+}
+
+/* Ensure the image embed itself is visible */
+body.hide-image-link-syntax .cm-line .internal-embed,
+body.hide-image-link-syntax .cm-line .internal-embed.image-embed {
+	display: inline-block !important;
+}
+
+/* Hide any alt text display */
+body.hide-image-link-syntax .internal-embed.image-embed .markdown-embed-title {
+	display: none;
+}
